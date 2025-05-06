@@ -20,6 +20,7 @@ On Windows you may run `CREATE STARTUP TASK.bat` to set up automatic launch on W
 ├── RUN PROGRAM.bat            # Starts logger in background (headless mode)
 ├── END PROGRAM.bat            # Stops the program (safety shutdown)
 ├── CREATE STARTUP TASK.bat    # Create Windows startup task
+├── REMOVE STARTUP TASK.bat    # Remove the startup task
 └── logs/                      
     └── YYYY-MM-DD.txt         # Example log file created
 └── Program/                   
@@ -39,7 +40,8 @@ On Windows you may run `CREATE STARTUP TASK.bat` to set up automatic launch on W
 - **Silent background mode**  
   Designed to run via `pythonw.exe` so no console window appears.
 - **Windows Scheduled Task**  
-  Run the `CREATE STARTUP TASK.bat` file if you want to have the program launch automatically on Windows startup. 
+  Run the `CREATE STARTUP TASK.bat` file if you want to have the program launch automatically on Windows startup.
+  Run the `REMOVE STARTUP TASK.bat` file if you want to remove the program from task scheduler.
 
 
 <br><br>
@@ -92,7 +94,7 @@ Example log file (`WhatDoingLogger/logs/2025-05-06.txt`):
    ```bash
    CREATE STARTUP TASK.bat
    ```
-   This creates a scheduled startup task for Windows, launching your logger when you first log in. 
+   This creates a scheduled startup task for Windows, launching your logger when you first log in.
 
 
 <br><br>

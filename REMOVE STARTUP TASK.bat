@@ -9,13 +9,9 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
-:: === CREATE SCHEDULED TASK ===
-schtasks /Create ^
- /TN "WhatWritingLogger" ^
- /TR "cmd /c \"\"%~dp0RUN PROGRAM.bat\"\"" ^
- /SC ONLOGON ^
- /F
+:: === DELETE SCHEDULED TASK ===
+schtasks /Delete /TN "WhatWritingLogger" /F
 
 echo.
-echo ✅ Scheduled Task "WhatWritingLogger" created successfully!
+echo ❌ Scheduled Task "WhatWritingLogger" has been removed!
 exit

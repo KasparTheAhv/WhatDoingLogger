@@ -1,2 +1,3 @@
 @echo off
-start /b pythonw program\track.py
+cd /d "%~dp0"
+start "" /b pythonw "program\track.py"
