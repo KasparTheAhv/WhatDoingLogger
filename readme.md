@@ -12,13 +12,13 @@ cd WhatDoingLogger
 
 ```
 .
-├── RUN PROGRAM.bat             # Starts logger in background (headless mode)
+├── RUN PROGRAM.bat            # Starts logger in background (headless mode)
 ├── END PROGRAM.bat            # Stops the program (safety shutdown)
 ├── CREATE STARTUP TASK.bat    # Create Windows startup task
-└── logs/                      # Automatically created on first run
-    └── YYYY-MM-DD.txt         # Today’s log file (e.g. 2025-05-06.txt)
-└── Program/                   # Holds the python program file
-    └── track.py               # Today’s log file (e.g. 2025-05-06.txt)    
+└── logs/                      
+    └── YYYY-MM-DD.txt         # Example log file created
+└── Program/                   
+    └── track.py               # The python program itself 
 ```
 
 ## 🚀 How It Works
