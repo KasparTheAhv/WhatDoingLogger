@@ -1,6 +1,6 @@
 # 🖱️🔑 WhatWriting — Keyboard & Mouse Activity Logger
 
-
+<br><br>
 ## 💻 Clone the repository
 ```bash
 git clone https://github.com/KasparTheAhv/WhatDoingLogger.git
@@ -12,7 +12,7 @@ Logs are stored in a `logs/` folder, one file per day.
 On Windows you may run `CREATE STARTUP TASK.bat` to set up automatic launch on Windows startup.
 
 
-
+<br><br>
 ## ⚙️ Project Structure
 
 ```
@@ -27,7 +27,7 @@ On Windows you may run `CREATE STARTUP TASK.bat` to set up automatic launch on W
 ```
 
 
-
+<br><br>
 ## 🚀 How It Works
 
 - **Automatic logs folder**  
@@ -42,7 +42,7 @@ On Windows you may run `CREATE STARTUP TASK.bat` to set up automatic launch on W
   Run the `CREATE STARTUP TASK.bat` file if you want to have the program launch automatically on Windows startup. 
 
 
-
+<br><br>
 ## 📄 Example Log Entries
 
 You don’t need to create the `logs/` folder manually— the program will do it for you.
@@ -55,7 +55,7 @@ Example log file (`WhatDoingLogger/logs/2025-05-06.txt`):
 ```
 
 
-
+<br><br>
 ## 🔧 Requirements
 
 - **Python**: 3.7 or higher  
@@ -70,7 +70,7 @@ Example log file (`WhatDoingLogger/logs/2025-05-06.txt`):
   ```
 
 
-
+<br><br>
 ## ▶️ Running the Logger
 
 1. **Start logging**  
@@ -95,13 +95,13 @@ Example log file (`WhatDoingLogger/logs/2025-05-06.txt`):
    This creates a scheduled startup task for Windows, launching your logger when you first log in. 
 
 
-
+<br><br>
 ## 🛡️ Disclaimer
 
 For **personal** or **authorized** use only. Ensure you have permission before logging keystrokes or mouse activity on any machine.
 
 
-
+<br><br>
 ## 📄 License
 
 [MIT](https://choosealicense.com/licenses/mit/) — free for personal and educational use.
