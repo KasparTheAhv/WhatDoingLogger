@@ -12,11 +12,13 @@ cd WhatDoingLogger
 
 ```
 .
-├── track.py             # Main logger script (also registers scheduled task on Windows)
-├── RUNLOGGING.bat       # Starts logger in background (headless mode)
-├── ENDMYSAFETY.bat      # Stops all Python background processes (safety shutdown)
-└── logs/                # Automatically created on first run
-    └── YYYY-MM-DD.txt   # Today’s log file (e.g. 2025-05-06.txt)
+├── RUN PROGRAM.bat             # Starts logger in background (headless mode)
+├── END PROGRAM.bat            # Stops the program (safety shutdown)
+├── CREATE STARTUP TASK.bat    # Create Windows startup task
+└── logs/                      # Automatically created on first run
+    └── YYYY-MM-DD.txt         # Today’s log file (e.g. 2025-05-06.txt)
+└── Program/                   # Holds the python program file
+    └── track.py               # Today’s log file (e.g. 2025-05-06.txt)    
 ```
 
 ## 🚀 How It Works
@@ -30,7 +32,7 @@ cd WhatDoingLogger
 - **Silent background mode**  
   Designed to run via `pythonw.exe` so no console window appears.
 - **Windows Scheduled Task**  
-  If running on Windows (`os.name == 'nt'`), on startup the script will automatically create or update a Scheduled Task named **WhatWritingLogger** that launches itself at user logon (using `schtasks /Create … /F`). This ensures one and only one task exists, and it will be overwritten on subsequent runs to keep the path up to date.
+  Run the `CREATE STARTUP TASK.bat` file if you want to have the program launch automatically on Windows startup. 
 
 ### Example Log Entries
 
@@ -46,8 +48,8 @@ cd WhatDoingLogger
   ```bash
   pip install pynput pygetwindow
   ```
-  **Optional**:
-  If you ever see an error about win32gui or similar when importing pygetwindow, just install the PyWin32 extensions:
+  **IN CASE OF ERROR**:
+  If you face an error about win32gui or similar when importing pygetwindow, just install the PyWin32 extensions:
   ```bash
   pip install pywin32
   ```
@@ -57,16 +59,23 @@ cd WhatDoingLogger
 1. **Start logging**  
    Double-click or run:
    ```bash
-   RUNLOGGING.bat
+   RUN PROGRAM.bat
    ```
-   This launches `track.py` in the background with `pythonw.exe`. On Windows, it will also set up the Scheduled Task the first time.
+   This launches `Program/track.py` in the background with `pythonw.exe`. On Windows, it will also set up the Scheduled Task the first time.
 
 2. **Stop logging**  
-   To safely terminate all background Python (`pythonw.exe`) instances:
+   Double-click or run:
    ```bash
-   ENDMYSAFETY.bat
+   END PROGRAM.bat
    ```
-   > ⚠️ *Warning:* This kills _all_ `pythonw.exe` processes—use with caution.
+   This safely ends the background process.
+
+3. **Automatic launch (OPTIONAL)**   
+   Double-click or run:
+   ```bash
+   CREATE STARTUP TASK.bat
+   ```
+   This creates a scheduled startup task for Windows, launching your logger when you first log in. 
 
 ## 📁 Output
 
@@ -76,7 +85,7 @@ All events are appended to:
 ```
 (e.g. `WhatDoingLogger/logs/2025-05-06.txt`)
 
-You don’t need to create the `logs/` folder manually—`track.py` will do it for you. The Windows task will also manage auto-start.
+You don’t need to create the `logs/` folder manually— the program will do it for you.
 
 ## 🛡️ Disclaimer
 
