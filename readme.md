@@ -6,7 +6,9 @@ git clone https://github.com/KasparTheAhv/WhatDoingLogger.git
 cd WhatDoingLogger
 ```
 
-**WhatWriting** is a lightweight Python utility that logs every key press and mouse click along with the active window title. Logs are stored in a `logs/` folder, one file per day, and each entry records only the time (no date or milliseconds). On Windows it can optionally register itself to start automatically at user logon via a Scheduled Task.
+**WhatWriting** is a lightweight Python utility that logs every key press and mouse click along with the active window title. 
+Logs are stored in a `logs/` folder, one file per day. 
+On Windows you may run `CREATE STARTUP TASK.bat` to set up automatic launch on Windows startup.
 
 ## ⚙️ Project Structure
 
@@ -34,7 +36,11 @@ cd WhatDoingLogger
 - **Windows Scheduled Task**  
   Run the `CREATE STARTUP TASK.bat` file if you want to have the program launch automatically on Windows startup. 
 
-### Example Log Entries
+### 📄 Example Log Entries
+
+You don’t need to create the `logs/` folder manually— the program will do it for you.
+
+Example log file (`WhatDoingLogger/logs/2025-05-06.txt`):
 
 ```
 11:08:22 : Key 'a' pressed in 'Notepad'
@@ -76,16 +82,6 @@ cd WhatDoingLogger
    CREATE STARTUP TASK.bat
    ```
    This creates a scheduled startup task for Windows, launching your logger when you first log in. 
-
-## 📁 Output
-
-All events are appended to:
-```
-<project-root>/logs/YYYY-MM-DD.txt
-```
-(e.g. `WhatDoingLogger/logs/2025-05-06.txt`)
-
-You don’t need to create the `logs/` folder manually— the program will do it for you.
 
 ## 🛡️ Disclaimer
 
