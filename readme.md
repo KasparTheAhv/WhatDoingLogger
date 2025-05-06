@@ -36,7 +36,7 @@ On Windows you may run `CREATE STARTUP TASK.bat` to set up automatic launch on W
 - **Windows Scheduled Task**  
   Run the `CREATE STARTUP TASK.bat` file if you want to have the program launch automatically on Windows startup. 
 
-### 📄 Example Log Entries
+## 📄 Example Log Entries
 
 You don’t need to create the `logs/` folder manually— the program will do it for you.
 
