@@ -1,5 +1,10 @@
 # 🖱️🔑 WhatWriting — Keyboard & Mouse Activity Logger
 
+## 💻 Clone the repository with:
+> ```bash
+> git clone https://github.com/KasparTheAhv/WhatDoingLogger.git
+> ```
+
 **WhatWriting** is a simple Python-based utility that logs keyboard and mouse activity, along with the active window title at the time of interaction. It is useful for personal productivity tracking, usability testing, or development of attention-focused tools.
 
 ## ⚙️ Project Structure
